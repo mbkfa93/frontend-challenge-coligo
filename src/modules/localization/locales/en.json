@@ -1,0 +1,11 @@
+{
+  "hello": "Hello - in English",
+  "side_menu__items": {
+    "announcements": "Announcements",
+    "courses": "Courses",
+    "dashboard": "Dashboard",
+    "gradebook": "Gradebook",
+    "performance": "Performance",
+    "schedule": "Schedule"
+  }
+}

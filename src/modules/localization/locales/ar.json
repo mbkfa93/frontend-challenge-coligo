@@ -1,0 +1,11 @@
+{
+  "hello": "اهلا",
+  "side_menu__items": {
+    "announcements": "الاشعارات",
+    "courses": "الكورسات",
+    "dashboard": "الصفحه الرئيسية",
+    "gradebook": "الدرجات",
+    "performance": "الجوده",
+    "schedule": "المواعيد"
+  }
+}

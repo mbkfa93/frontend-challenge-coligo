@@ -1,0 +1,11 @@
+{
+  "hello": "bonjour en francais",
+  "side_menu__items": {
+    "announcements": "annonces",
+    "courses": "Cours",
+    "dashboard": "tableau de bord",
+    "gradebook": "bulletin de notes",
+    "performance": "Performance",
+    "schedule": "Programme"
+  }
+}
