@@ -17,7 +17,7 @@
  * That can be applied only for production mode,
  *
  */
-export const flattenMessages = ((nestedMessages, prefix = '') => {
+export const flattenMessages = ((nestedMessages: any, prefix = '') => {
     if (nestedMessages === null) {
         return {}
     }

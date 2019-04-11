@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "@types/react": "^16.8.12",
+    "@types/react-dom": "^16.8.3",
+    "@types/react-intl": "^2.3.17",
+    "@types/react-intl-redux": "^0.1.11",
+    "axios": "^0.18.0",
     "concurrently": "^4.1.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
@@ -37,6 +41,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.8",
+    "ts-node": "^8.0.3"
   }
 }

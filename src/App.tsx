@@ -29,6 +29,15 @@ const useFrench = function () {
     })
 };
 
+const getAnnouncements = function () {
+    store.dispatch({
+        type: CONSTANTS.ACTIONS.SERVICES.ANNOUNCEMENT,
+        payload: {
+            locale: 'fr'
+        }
+    })
+};
+
 
 class App extends Component {
     render() {
@@ -46,7 +55,7 @@ class App extends Component {
                 <header className="app-header">
                     <p onClick={useEnglish}>use English</p>
                     <p onClick={useFrench}>use French </p>
-
+                    <p onClick={getAnnouncements}> get announcement</p>
 
                     <a className="App-link"
                        href="https://reactjs.org"

@@ -7,9 +7,9 @@ import {addLocaleData} from 'react-intl'
  * For adding a new language, Modify only in the following code block
  */
 /******************************************************************************/
-import en from 'react-intl/locale-data/en.js'
-import fr from 'react-intl/locale-data/fr.js';
-import ar from 'react-intl/locale-data/ar.js';
+import en from 'react-intl/locale-data/en'
+import fr from 'react-intl/locale-data/fr';
+import ar from 'react-intl/locale-data/ar';
 
 addLocaleData([...en, ...ar, ...fr,]);
 /******************************************************************************/
@@ -21,7 +21,8 @@ addLocaleData([...en, ...ar, ...fr,]);
  * @return {{locale: string}}
  */
 const getMessagesForLocale = (locale = CONSTANTS.TRANSLATION_CONFIG.DEFAULT_LANG) => {
-    let result = {locale};
+    let result: any = {locale};
+    result.locale = locale;
     try {
         result.messages = require('./' + CONSTANTS.TRANSLATION_CONFIG.TRANSLATIONS_FILE_PATH_PREFIX + locale.toLowerCase());
     } catch (e) {
