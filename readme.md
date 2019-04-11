@@ -1,8 +1,9 @@
 # Coligo Technologies - Frontend Challenge
 This repo contains the task requested from [Coligo Technologies](https://web.coligotech.com/) , as a part of the hiring process for the position of React/Front-End Developer
 
+<!-- -->
 
-#live Demo
+# live Demo
 
 You can find the live demo of the deployed app on [Heroku](https://frontend-challenge-coligo.herokuapp.com/).
 
@@ -10,6 +11,7 @@ You can find the live demo of the deployed app on [Heroku](https://frontend-chal
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+<!--
 ### Prerequisites
 
 What things you need to install the software and how to install them
@@ -29,6 +31,17 @@ Say what the step will be
 ```
 npm install && npm start:dev
 ```
+-->
+
+
+### Running
+
+To run the project, use the following commands
+
+```
+npm install && npm start:dev
+```
+
 
 
 
@@ -39,22 +52,10 @@ TODO: Explain how to run the automated tests for this system
 
 ### Break down into end to end tests
 
-TODO:Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+TODO: Tests are not yet included
 
 ## Deployment
-This project is currently set to automatically deploy to heroku on every git push.
+This project is currently set to automatically deploy to [Heroku](https://frontend-challenge-coligo.herokuapp.com/) on every git push.
 
 ## Built With
 * [create-react-app](https://github.com/facebook/create-react-app) - For generating the initial project structure
