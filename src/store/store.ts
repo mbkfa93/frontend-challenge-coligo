@@ -7,7 +7,7 @@ import {translationInitialState} from "../modules/localization/localizationWrapp
 //Uncomment the next line on dev mode
 // import {composeWithDevTools} from 'redux-devtools-extension';
 //comment the next line on dev mode
-const composeWithDevTools = (x) => eval(x);
+const composeWithDevTools = (x: any) => eval(x);
 
 const sagaMiddleware = createSAgaMiddleware();
 
