@@ -14,7 +14,7 @@ const CONSTANTS = {
         }
     },
     URLS: {
-        BASE_URL: "http://localhost/api/v1/",
+        BASE_URL: "https://raw.githubusercontent.com/mbkfa93/coligo-mock/master/api/v1/",
         SERVICES: {
             QUIZ: '/quiz',
             ANNOUNCEMENT: '/announcement'

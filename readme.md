@@ -91,6 +91,7 @@ This project is currently set to automatically deploy to heroku on every git pus
 |Trying localization POC| ~5H | A lot of time was spent trying to get [redux-polylgot](https://github.com/Tiqa/redux-polyglot) to work, after suffering from poor documentation, and checking [comparison on npmtrends](https://www.npmtrends.com/redux-polyglot-vs-react-localize-vs-react-intl-vs-react-redux-i18n-vs-react-i18next-vs-i18n-react), it was decided to try  [react-intl](https://github.com/yahoo/react-intl)|
 |Trying react-intl| ~4H |Trying the new library as POC, adding [react-intl-redux](https://github.com/ratson/react-intl-redux), cleaning the code, trying [babelEdit](https://www.codeandweb.com/babeledit) for managing translations|
 |Networking abstraction layer| ~6H | Abstraction layer for using [axios](https://github.com/axios/axios), to make it easy in case it was required to use a different library|
+|Creating mock for services| ~1H| Creating a sample [mock repo on github](https://github.com/mbkfa93/coligo-mock), to include sample services for quizzes and announcements| 
 
 ## Acknowledgments
 * Readme template from [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)

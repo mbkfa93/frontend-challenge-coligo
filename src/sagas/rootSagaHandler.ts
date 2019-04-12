@@ -62,10 +62,7 @@ function callGetAnnouncement(payload: object) {
     console.log('payload in callgetannounc', payload);
     return networkManager.sendRequest(new HttpRequest(
         CONSTANTS.URLS.SERVICES.ANNOUNCEMENT, {
-            headers: {
-                'hdsdf': "some header val"
-            },
-            method: HttpRequest.requestMethod.POST,
+            // method: HttpRequest.requestMethod.POST,
             body: payload
         }))
 }

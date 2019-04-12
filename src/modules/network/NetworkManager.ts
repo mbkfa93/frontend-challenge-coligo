@@ -19,8 +19,8 @@ class NetworkManager {
     }
 
     private _instance: any;
-    private _instanceOptions: any;
-    private _managerType: any;
+    private _instanceOptions!: object;
+    private _managerType!: string;
 
     get instance(): any {
         return this._instance;
