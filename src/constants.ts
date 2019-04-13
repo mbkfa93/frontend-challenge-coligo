@@ -1,5 +1,4 @@
 const CONSTANTS = {
-
     TRANSLATION_CONFIG: {
         DEFAULT_LANG: 'en',
         TRANSLATIONS_FILE_PATH_PREFIX: 'locales/'
@@ -9,7 +8,12 @@ const CONSTANTS = {
             LOAD_LANGUAGE: "LOAD_LANGUAGE"
         },
         SERVICES: {
-            QUIZ: 'quiz',
+            QUIZ:{
+                QUIZ_FETCH:"QUIZ_FETCH",
+                QUIZ_REQUESTED:"QUIZ_REQUESTED",
+                QUIZ_REQUEST_SUCCEEDED:"QUIZ_REQUEST_SUCCEEDED",
+                QUIZ_REQUEST_FAILED:"QUIZ_REQUEST_FAILED",
+            } ,
             ANNOUNCEMENT: 'announcement'
         }
     },

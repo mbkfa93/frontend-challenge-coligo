@@ -7,14 +7,11 @@
  * the last approach was used
  *
  */
-import {call, takeLatest} from 'redux-saga/effects'
+import {takeLatest} from 'redux-saga/effects'
 
 import saga_Localization from '../modules/localization/localizationSaga';
-import {HttpRequest, networkManager} from "../modules/network/networkInterface";
-import {CONSTANTS} from "../constants";
-
-
 import {makeSagasRestartable, yieldCombinedSagas} from "./sagaHelper";
+import saga_services from "../modules/services/servicesSaga";
 
 
 /*
@@ -55,7 +52,7 @@ function* rootSagaDecrement() {
     yield takeLatest("INCREMENT", increment);
 };
 
-*/
+
 
 
 function callGetAnnouncement(payload: object) {
@@ -66,6 +63,7 @@ function callGetAnnouncement(payload: object) {
             body: payload
         }))
 }
+*/
 
 function* testingSaga1(data: object) {
     try {
@@ -79,7 +77,7 @@ function* testingSaga1(data: object) {
 
 }
 
-
+/*
 function* testingSaga(action: any) {
     try {
         let {data} = yield call(callGetAnnouncement, action.payload);
@@ -91,10 +89,10 @@ function* testingSaga(action: any) {
     }
 
 }
-
+*/
 
 function* rootSagaTest() {
-    yield takeLatest(CONSTANTS.ACTIONS.SERVICES.ANNOUNCEMENT, testingSaga);
+    // yield takeLatest(CONSTANTS.ACTIONS.SERVICES.ANNOUNCEMENT, testingSaga);
     yield takeLatest('crap', testingSaga1);
 }
 
@@ -108,6 +106,7 @@ const rootSagas = [
     // rootSagaIncrement,
     // rootSagaDecrement,
     rootSagaTest,
+    saga_services,
     saga_Localization
 ];
 
