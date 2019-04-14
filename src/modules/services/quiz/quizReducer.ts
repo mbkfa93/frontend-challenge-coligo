@@ -1,26 +1,28 @@
 import {CONSTANTS} from "../../../constants";
 import {initialStates} from "../../../store/initialState";
+import RequestStatus from "../../../utils/requestStatus";
 
 
-const quizReducer= (state = initialStates, action: any) => {
+const quizReducer = (state = initialStates, action: any) => {
+    const quizState = RequestStatus(CONSTANTS.ACTIONS.SERVICES.QUIZ);
     switch (action.type) {
-        case CONSTANTS.ACTIONS.SERVICES.QUIZ.QUIZ_FETCH:
-            return{
+        case  quizState.FETCH:
+            return {
                 ...state,
             };
-        case CONSTANTS.ACTIONS.SERVICES.QUIZ.QUIZ_REQUESTED:
+        case quizState.REQUESTED:
             return state;
-        case CONSTANTS.ACTIONS.SERVICES.QUIZ.QUIZ_REQUEST_SUCCEEDED:
-            console.log('succeeded,',action);
-            return{
+        case quizState.SUCCEEDED:
+            console.log('succeeded,', action);
+            return {
                 ...state,
-                quizzes:action.quizzes
+                quizzes: action.quizzes
             };
-        case CONSTANTS.ACTIONS.SERVICES.QUIZ.QUIZ_REQUEST_FAILED:
+        case quizState.FAILED:
             return state;
         default:
             return state;
     }
 };
 
-export { quizReducer}
+export {quizReducer}

@@ -1,7 +1,7 @@
-#Notes for adding new languages
+# Notes for adding new languages
 In order to add new languages, you only need to do the following modifications
 
-####localizationWrapper.ts
+#### localizationWrapper.ts
 
 * Add another import, for the reburied language to the following list
 

@@ -10,6 +10,7 @@ import {quizFetch} from "./modules/services/quiz/quizServices";
 
 import {connect} from "react-redux";
 import Quizzes from "./modules/components/quiz/quizzes";
+import RequestStatus from "./utils/requestStatus";
 
 
 sagaMiddleware.run(rootSaga);
@@ -56,10 +57,11 @@ class App extends Component {
                     <p onClick={useFrench}>use French </p>
                     <p onClick={getAnnouncements}> get quiz</p>
 
+                    <p>{RequestStatus(CONSTANTS.ACTIONS.SERVICES.ANNOUNCEMENT).FAILED}</p>
+
                     {/*<p onClick={this.props.quizFetch()}> get quiz connect</p>*/}
 
                     <p>{JSON.stringify(this.props)}</p>
-
 
 
                     <a className="App-link"

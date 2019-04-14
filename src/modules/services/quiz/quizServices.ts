@@ -1,29 +1,31 @@
 import {networkManager, HttpRequest} from "../../network/networkInterface";
 import {CONSTANTS} from "../../../constants";
 import {put, takeLatest} from 'redux-saga/effects'
+import RequestStatus from "../../../utils/requestStatus";
 
 
 /**
  * ACTION CREATORS
  */
+const quizState = RequestStatus(CONSTANTS.ACTIONS.SERVICES.QUIZ);
 
 const quizFetch = () => {
-    return {type: CONSTANTS.ACTIONS.SERVICES.QUIZ.QUIZ_FETCH}
+    return {type: quizState.FETCH}
 };
 const quizRequested = () => {
-    return {type: CONSTANTS.ACTIONS.SERVICES.QUIZ.QUIZ_REQUESTED}
+    return {type: quizState.REQUESTED}
 };
 const quizRequestedSucc = (quizzes: Array<object>) => {
     console.log('quiz requested succ,', quizzes);
     return {
-        type: CONSTANTS.ACTIONS.SERVICES.QUIZ.QUIZ_REQUEST_SUCCEEDED,
+        type: quizState.SUCCEEDED,
         quizzes
     }
 };
 
 const quizRequestedErr = (error: string) => {
     return {
-        type: CONSTANTS.ACTIONS.SERVICES.QUIZ.QUIZ_REQUEST_FAILED,
+        type: quizState.FAILED,
         error
     }
 };
@@ -47,7 +49,7 @@ function* getQuizzes(action: object) {
  * @description quizzes function watcher
  */
 function* quizSaga() {
-    yield takeLatest(CONSTANTS.ACTIONS.SERVICES.QUIZ.QUIZ_FETCH, getQuizzes);
+    yield takeLatest(quizState.FETCH, getQuizzes);
 }
 
 

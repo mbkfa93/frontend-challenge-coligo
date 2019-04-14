@@ -8,12 +8,7 @@ const CONSTANTS = {
             LOAD_LANGUAGE: "LOAD_LANGUAGE"
         },
         SERVICES: {
-            QUIZ:{
-                QUIZ_FETCH:"QUIZ_FETCH",
-                QUIZ_REQUESTED:"QUIZ_REQUESTED",
-                QUIZ_REQUEST_SUCCEEDED:"QUIZ_REQUEST_SUCCEEDED",
-                QUIZ_REQUEST_FAILED:"QUIZ_REQUEST_FAILED",
-            } ,
+            QUIZ: "QUIZ",
             ANNOUNCEMENT: 'announcement'
         }
     },
