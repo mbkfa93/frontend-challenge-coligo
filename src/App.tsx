@@ -6,6 +6,10 @@ import rootSaga from "./sagas/rootSagaHandler";
 
 import "./App.css";
 import "./styles/css/style.css";
+import {quizFetch} from "./modules/services/quiz/quizServices";
+
+import {connect} from "react-redux";
+import Quizzes from "./modules/components/quiz/quizzes";
 
 
 sagaMiddleware.run(rootSaga);
@@ -30,12 +34,7 @@ const useFrench = function () {
 };
 
 const getAnnouncements = function () {
-    store.dispatch({
-        type: CONSTANTS.ACTIONS.SERVICES.ANNOUNCEMENT,
-        payload: {
-            locale: 'fr'
-        }
-    })
+    store.dispatch(quizFetch());
 };
 
 
@@ -44,7 +43,7 @@ class App extends Component {
         return (
             <div className="app">
                 <p><FormattedMessage id="hello"/></p>
-
+                <Quizzes/>
                 <FormattedMessage id="side_menu__items.courses"/>
                 <p>
                     <FormattedMessage id="side_menu__items.gradebook"/>
@@ -55,7 +54,13 @@ class App extends Component {
                 <header className="app-header">
                     <p onClick={useEnglish}>use English</p>
                     <p onClick={useFrench}>use French </p>
-                    <p onClick={getAnnouncements}> get announcement</p>
+                    <p onClick={getAnnouncements}> get quiz</p>
+
+                    {/*<p onClick={this.props.quizFetch()}> get quiz connect</p>*/}
+
+                    <p>{JSON.stringify(this.props)}</p>
+
+
 
                     <a className="App-link"
                        href="https://reactjs.org"
@@ -67,6 +72,16 @@ class App extends Component {
             </div>
         );
     }
+
 }
 
-export default App;
+const mapStateToProps = (state: any) => ({
+    ...state
+});
+const mapDispatchToProps = (dispatch: any) => ({
+    quizFetch: () => dispatch(quizFetch())
+    // setBgAction: (payload) => dispatch(setBgAction(payload)),
+    // setColorAction: (payload) => dispatch(setColorAction(payload))
+});
+// export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
