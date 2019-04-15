@@ -3,6 +3,14 @@ const CONSTANTS = {
         DEFAULT_LANG: 'en',
         TRANSLATIONS_FILE_PATH_PREFIX: 'locales/'
     },
+    STATUS: {
+        REQUEST: {
+            IDLE: "IDLE",
+            FETCHING: 'FETCHING',
+            SUCCEEDED: 'SUCCEEDED',
+            FAILED: 'FAILED'
+        }
+    },
     ACTIONS: {
         TRANSLATION: {
             LOAD_LANGUAGE: "LOAD_LANGUAGE"

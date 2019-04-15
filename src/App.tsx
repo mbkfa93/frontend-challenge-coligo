@@ -45,13 +45,13 @@ class App extends Component {
             <div className="app">
                 <p><FormattedMessage id="hello"/></p>
                 <Quizzes/>
-                <FormattedMessage id="side_menu__items.courses"/>
+                {/* <FormattedMessage id="side_menu__items.courses"/>
                 <p>
                     <FormattedMessage id="side_menu__items.gradebook"/>
                 </p>
                 <p>
                     <FormattedMessage id="side_menu__items.announcements"/>
-                </p>
+                </p>*/}
                 <header className="app-header">
                     <p onClick={useEnglish}>use English</p>
                     <p onClick={useFrench}>use French </p>
@@ -63,18 +63,10 @@ class App extends Component {
 
                     <p>{JSON.stringify(this.props)}</p>
 
-
-                    <a className="App-link"
-                       href="https://reactjs.org"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Learn React
-                    </a>
                 </header>
             </div>
         );
     }
-
 }
 
 const mapStateToProps = (state: any) => ({

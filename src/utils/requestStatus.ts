@@ -41,7 +41,7 @@ class _RequestStatus {
         this._SUCCEEDED = value;
     }
 
-    constructor(apiName: string, postfix = "") {
+    constructor(apiName = "", postfix = "") {
         this.FETCH = `${apiName}_FETCH_${postfix}`;
         this.REQUESTED = `${apiName}_REQUESTED_${postfix}`;
         this.SUCCEEDED = `${apiName}_SUCCEEDED_${postfix}`;
@@ -49,7 +49,7 @@ class _RequestStatus {
     }
 }
 
-const RequestStatus = (apiName: string) => {
+const RequestStatus = (apiName = "") => {
     return new _RequestStatus(apiName);
 };
 export default RequestStatus;

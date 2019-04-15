@@ -27,6 +27,116 @@
                 </translations>
             </concept_node>
             <folder_node>
+                <name>quiz_component</name>
+                <children>
+                    <concept_node>
+                        <name>course</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>ar-EG</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>fr-FR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>due_to</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>ar-EG</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>fr-FR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>solve_assignment</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>ar-EG</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>fr-FR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>start_quiz</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>ar-EG</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>fr-FR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>topic</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>ar-EG</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>fr-FR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                </children>
+            </folder_node>
+            <folder_node>
                 <name>side_menu__items</name>
                 <children>
                     <concept_node>
@@ -164,28 +274,28 @@
         <language>
             <code>ar-EG</code>
             <source_id></source_id>
-            <source_file>frontend-challenge-coligo/src/modules/localization/locales/ar.json</source_file>
+            <source_file>src/modules/localization/locales/ar.json</source_file>
         </language>
         <language>
             <code>en-US</code>
             <source_id></source_id>
-            <source_file>frontend-challenge-coligo/src/modules/localization/locales/en.json</source_file>
+            <source_file>src/modules/localization/locales/en.json</source_file>
         </language>
         <language>
             <code>fr-FR</code>
             <source_id></source_id>
-            <source_file>frontend-challenge-coligo/src/modules/localization/locales/fr.json</source_file>
+            <source_file>src/modules/localization/locales/fr.json</source_file>
         </language>
     </languages>
     <translation_files>
         <translation_file>
-            <file>frontend-challenge-coligo/src/modules/localization/locales/en.json</file>
+            <file>src/modules/localization/locales/en.json</file>
         </translation_file>
         <translation_file>
-            <file>frontend-challenge-coligo/src/modules/localization/locales/fr.json</file>
+            <file>src/modules/localization/locales/fr.json</file>
         </translation_file>
         <translation_file>
-            <file>frontend-challenge-coligo/src/modules/localization/locales/ar.json</file>
+            <file>src/modules/localization/locales/ar.json</file>
         </translation_file>
     </translation_files>
     <editor_configuration>
@@ -197,8 +307,8 @@
     </editor_configuration>
     <primary_language>/home/meena/Documents/out.json</primary_language>
     <configuration>
-        <definitions>frontend-challenge-coligo/src/modules/localization/locales</definitions>
-        <indent>tab</indent>
+        <definitions>src/modules/localization/locales</definitions>
+        <indent>space2</indent>
         <format>namespaced-json</format>
     </configuration>
 </babeledit_project>
