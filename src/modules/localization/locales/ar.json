@@ -1,5 +1,12 @@
 {
   "hello": "اهلا",
+  "quiz_component": {
+    "course": "ماده",
+    "due_to": "المعاد",
+    "solve_assignment": "حل الواجب",
+    "start_quiz": "بدء مسابقة",
+    "topic": "الموضوع"
+  },
   "side_menu__items": {
     "announcements": "الاشعارات",
     "courses": "الكورسات",

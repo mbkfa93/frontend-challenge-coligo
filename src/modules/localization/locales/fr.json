@@ -1,5 +1,12 @@
 {
   "hello": "bonjour en francais",
+  "quiz_component": {
+    "course": "cours",
+    "due_to": "a",
+    "solve_assignment": "Résoudre une affectation",
+    "start_quiz": "Lancer le questionnaire",
+    "topic": "sujet"
+  },
   "side_menu__items": {
     "announcements": "annonces",
     "courses": "Cours",

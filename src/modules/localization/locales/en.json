@@ -1,5 +1,12 @@
 {
   "hello": "Hello - in English",
+  "quiz_component": {
+    "course": "Course",
+    "due_to": "Due to",
+    "solve_assignment": "Solve Assignment",
+    "start_quiz": "Start Quiz",
+    "topic": "Topic"
+  },
   "side_menu__items": {
     "announcements": "Announcements",
     "courses": "Courses",
