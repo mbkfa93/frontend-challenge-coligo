@@ -96,7 +96,7 @@ This project is currently set to automatically deploy to [Heroku](https://fronte
 |Quizzes API call | ~5H | Including time to understand/use action watchers, action creators, action workers, reducers, reducer initial state|
 |Quiz Component | ~3H | initial quizzes component, that gets data from the fake-mock and loads some of it in the view, handling display only after data load|
 |Request State class| ~1H | Added a class for dynamically generating/using the status for each API call (Requested,Fetched,Succeeded,Failed)
- 
+|Separate Quiz component| ~2H | Initial handling for data display based on apoi response
  
 
 ## Acknowledgments

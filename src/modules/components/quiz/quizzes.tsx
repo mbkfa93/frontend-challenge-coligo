@@ -1,30 +1,55 @@
 import {connect} from "react-redux";
 import React from "react";
+import {CONSTANTS} from "../../../constants";
+import Quiz from "./quiz";
+// import PropTypes from "prop-types";
 
 
 const Quizzes = (payload: any) => {
 
-    if (payload.quizzes && payload.quizzes.quizzes && payload.quizzes.quizzes.length) {
-        return (<div>
-            <p>quizzes go here</p>
-            {/*<p>{JSON.stringify(payload.quizzes.quizzes)}</p>*/}
 
-            <ul>
-                {payload.quizzes.quizzes.map((quiz: any) => (
-                    <p key={quiz.id}>
-                        {/*{JSON.stringify(quiz)}*/}
-                        {quiz.course} : {quiz.topic}
-                    </p>
-                ))}
-            </ul>
-        </div>)
-    } else {
-        return (
+    switch (payload.quizzes.status) {
+        case CONSTANTS.STATUS.REQUEST.FETCHING:
+            return (
+                <div>
+                    LOADING...
+                </div>
+            );
+        case CONSTANTS.STATUS.REQUEST.SUCCEEDED:
+            if (payload.quizzes && payload.quizzes.quizzes && payload.quizzes.quizzes.length) {
+                return (
+                    <div>
+                        <ul>
+                            {
+                                payload.quizzes.quizzes.map((quiz: any) => (
+                                    <Quiz key={quiz.id} quiz={quiz}/>
+                                ))
+                            }
+                        </ul>
+                    </div>)
+            } else {
+                return (
 
-            <div>
-                loading data...
-            </div>
-        )
+                    <div>
+                        loading data...
+                    </div>
+                )
+            }
+
+        case CONSTANTS.STATUS.REQUEST.FAILED:
+            return (
+                <div>
+                    ERROR in loading data...
+                </div>
+            );
+
+        case CONSTANTS.STATUS.REQUEST.IDLE:
+        default:
+            return (
+                <div>
+                    Idle.......
+                </div>
+            )
     }
 };
 
