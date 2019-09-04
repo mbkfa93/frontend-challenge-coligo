@@ -1,18 +1,23 @@
 {
-  "hello": "Hello - in English",
-  "quiz_component": {
-    "course": "Course",
-    "due_to": "Due to",
-    "solve_assignment": "Solve Assignment",
-    "start_quiz": "Start Quiz",
-    "topic": "Topic"
+  "languageConfig": {
+    "textDirection": "ltr"
   },
-  "side_menu__items": {
-    "announcements": "Announcements",
-    "courses": "Courses",
-    "dashboard": "Dashboard",
-    "gradebook": "Gradebook",
-    "performance": "Performance",
-    "schedule": "Schedule"
+  "strings": {
+    "hello": "Hello - in English",
+    "quiz_component": {
+      "course": "Course",
+      "due_to": "Due to",
+      "solve_assignment": "Solve Assignment",
+      "start_quiz": "Start Quiz",
+      "topic": "Topic"
+    },
+    "side_menu__items": {
+      "announcements": "Announcements",
+      "courses": "Courses",
+      "dashboard": "Dashboard",
+      "gradebook": "Gradebook",
+      "performance": "Performance",
+      "schedule": "Schedule"
+    }
   }
 }

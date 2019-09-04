@@ -13,7 +13,8 @@ const CONSTANTS = {
     },
     ACTIONS: {
         TRANSLATION: {
-            LOAD_LANGUAGE: "LOAD_LANGUAGE"
+            LOAD_LANGUAGE: "LOAD_LANGUAGE",
+            UPDATE_LOCALIZATION_CONFIG:"UPDATE_LOCALIZATION_CONFIG"
         },
         SERVICES: {
             QUIZ: "QUIZ",

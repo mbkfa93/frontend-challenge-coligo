@@ -2,6 +2,7 @@ import {intlReducer} from 'react-intl-redux'
 import {CONSTANTS} from "../../constants";
 import {flattenMessages} from './localizationHelper';
 import {addLocaleData} from 'react-intl'
+import {localizationReducer} from "./localizationReducer";
 
 /**
  * For adding a new language, Modify only in the following code block
@@ -22,14 +23,17 @@ addLocaleData([...en, ...ar, ...fr,]);
  */
 const getMessagesForLocale = (locale = CONSTANTS.TRANSLATION_CONFIG.DEFAULT_LANG) => {
     let result: any = {locale};
+    let translationFile: any;
     result.locale = locale;
     try {
-        result.messages = require('./' + CONSTANTS.TRANSLATION_CONFIG.TRANSLATIONS_FILE_PATH_PREFIX + locale.toLowerCase());
+        translationFile = require('./' + CONSTANTS.TRANSLATION_CONFIG.TRANSLATIONS_FILE_PATH_PREFIX + locale.toLowerCase());
     } catch (e) {
-        result.messages = require('./' + CONSTANTS.TRANSLATION_CONFIG.TRANSLATIONS_FILE_PATH_PREFIX + CONSTANTS.TRANSLATION_CONFIG.DEFAULT_LANG);
+        translationFile = require('./' + CONSTANTS.TRANSLATION_CONFIG.TRANSLATIONS_FILE_PATH_PREFIX + CONSTANTS.TRANSLATION_CONFIG.DEFAULT_LANG);
         result.locale = CONSTANTS.TRANSLATION_CONFIG.DEFAULT_LANG;
     }
-    result.messages = flattenMessages(result.messages);
+    result.languageConfig = translationFile.languageConfig;
+    result.messages = flattenMessages(translationFile.strings);
+
     return result;
 };
 
@@ -37,12 +41,14 @@ const getMessagesForLocale = (locale = CONSTANTS.TRANSLATION_CONFIG.DEFAULT_LANG
 const initialState = {
     intl: {
         locale: CONSTANTS.TRANSLATION_CONFIG.DEFAULT_LANG.toLowerCase(),
-        messages: getMessagesForLocale().messages
+        messages: getMessagesForLocale().messages,
     },
+    languageConfig: getMessagesForLocale().languageConfig
 };
 
 export {
     intlReducer as translationReducer,
+    localizationReducer,
     initialState as translationInitialState,
     getMessagesForLocale
 };

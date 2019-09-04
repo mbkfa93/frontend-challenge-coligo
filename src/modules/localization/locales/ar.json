@@ -1,18 +1,24 @@
 {
-  "hello": "اهلا",
-  "quiz_component": {
-    "course": "ماده",
-    "due_to": "المعاد",
-    "solve_assignment": "حل الواجب",
-    "start_quiz": "بدء مسابقة",
-    "topic": "الموضوع"
+  "languageConfig": {
+    "textDirection": "rtl"
   },
-  "side_menu__items": {
-    "announcements": "الاشعارات",
-    "courses": "الكورسات",
-    "dashboard": "الصفحه الرئيسية",
-    "gradebook": "الدرجات",
-    "performance": "الجوده",
-    "schedule": "المواعيد"
+  "strings": {
+    "hello": "اهلا",
+    "quiz_component": {
+      "course": "ماده",
+      "due_to": "المعاد",
+      "solve_assignment": "حل الواجب",
+      "start_quiz": "بدء مسابقة",
+      "topic": "الموضوع"
+    },
+    "side_menu__items": {
+      "announcements": "الاشعارات",
+      "courses": "الكورسات",
+      "dashboard": "الصفحه الرئيسية",
+      "gradebook": "الدرجات",
+      "performance": "الجوده",
+      "schedule": "المواعيد"
+    }
   }
+
 }

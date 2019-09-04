@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import {translationReducer} from "../modules/localization/localizationWrapper";
+import {translationReducer,localizationReducer} from "../modules/localization/localizationWrapper";
 import {quizReducer} from "../modules/services/servicesReducer";
 
 
@@ -10,6 +10,7 @@ import {quizReducer} from "../modules/services/servicesReducer";
  */
 const reducers = combineReducers({
     intl: translationReducer,
+    localizationReducer,
     quizzes:quizReducer
 } as any);
 export {reducers};
