@@ -10,11 +10,7 @@ import {quizFetch} from "./modules/services/quiz/quizServices";
 
 import {connect} from "react-redux";
 import Quizzes from "./modules/components/quiz/quizzes";
-import RequestStatus from "./utils/requestStatus";
 
-
-// @ts-ignore
-import DirectionProvider from 'react-with-direction/dist/DirectionProvider';
 sagaMiddleware.run(rootSaga);
 
 
@@ -53,8 +49,6 @@ const getAnnouncements = function () {
 class App extends Component<any> {
     render() {
         return (
-            //<DirectionProvider direction={DIRECTIONS.LTR}>
-            <DirectionProvider direction={this.props.localizationReducer.textDirection}>
                 <div className="app">
                     ----------------------------------------------------------------
                     <div>
@@ -86,7 +80,6 @@ class App extends Component<any> {
 
                     </header>
                 </div>
-            </DirectionProvider>
         );
     }
 
